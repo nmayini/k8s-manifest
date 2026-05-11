@@ -1,24 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
-  name: spring-app
+  name: nginx-app
+
 spec:
   replicas: 2
 
   selector:
     matchLabels:
-      app: spring-app
+      app: nginx-app
 
   template:
     metadata:
       labels:
-        app: spring-app
+        app: nginx-app
 
     spec:
       containers:
-      - name: spring-app
+      - name: nginx
 
-        image: nikhilmayini/spring-app:1
+        image: nginx:latest
 
         ports:
-        - containerPort: 8080
+        - containerPort: 80
