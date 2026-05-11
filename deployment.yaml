@@ -18,7 +18,7 @@ spec:
       containers:
       - name: spring-app
 
-        image: <DOCKER-USERNAME>/spring-app:latest
+        image: nikhilmayini/spring-app:1
 
         ports:
         - containerPort: 8080
